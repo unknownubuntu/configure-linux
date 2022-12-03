@@ -33,11 +33,11 @@ BLEACHBIT_CLEANERS="bash.history system.cache system.clipboard system.custom sys
 OVERWRITE="true"
 
 # The default local hostname
-REAL_HOSTNAME="kali"
+REAL_HOSTNAME="ubunknown"
 
 # Include default options, if any
-if [ -f /etc/default/kali-anonymous ] ; then
-	. /etc/default/kali-anonymous
+if [ -f /etc/default/backbox-anonymous ] ; then
+	. /etc/default/backbox-anonymous
 fi
 
 warning() {
@@ -387,7 +387,7 @@ do_status() {
 do_update() {
 
 	echo "\n[i] Updating ...\n"
-	git clone https://github.com/keeganjk/kali-anonymous
+	git clone https://github.com/unknownubuntu/configure-linux.git/
 	cd kali-anonymous
 	sh setup.sh
 	cd ..
